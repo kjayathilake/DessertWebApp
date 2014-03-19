@@ -18,10 +18,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$user = new User();
 	$user->username = $username;
 	$user->password = $password;
-	$user->save();
+	$res = $user->authenticate();
+        
+        if($res)
+        {
+            session_start();
+            $_SESSION["username"] = $username;
+            $_SESSION["timeout"] = time();
+            
+                redirect_to("home.php");
+                //Header("Location: members.php");
+        }
+        else
+        {
+                echo '<script language="javascript">';
+                echo 'alert("login failed")';
+                echo '</script>';
+                //Header("Location: login.php");
+        }
 		
-	// Redirect to site root
-	redirect_to('.');
 }
 
 // Include page view

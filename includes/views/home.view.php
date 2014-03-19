@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="./includes/assets/ico/favicon.ico">
 
     <title>Home</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./includes/libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../libraries/dailydessert/css/home.css" rel="stylesheet">
+    <link href="./includes/libraries/dailydessert/css/home.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -35,7 +35,7 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <h3 class="text-muted">Hi, Krish</h3>
+        <h3 class="text-muted">Hi, <?php echo $_SESSION["username"]; ?></h3>
       </div>
 
       <div class="jumbotron">

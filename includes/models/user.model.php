@@ -1,6 +1,6 @@
 <?php
 
-class Post 
+class User 
 {
 	public $id;
 	public $username;
@@ -98,5 +98,16 @@ class Post
 			// Return insert when id does not exists
 			return $this->insert();
 		}
-	}	
+	}
+	
+	public function authenticate()
+	{
+
+		$sql = sprintf("select * from users where username = '%s' and password = PASSWORD('%s') limit 1", $this->username, $this->password);
+		// Execute database query
+		$obj = self::getBySql($sql);
+		
+		return $obj;
+
+	}
 }

@@ -30,7 +30,7 @@
 
     <div class="container">
 
-      <form class="form-signin" role="form" action="login.php">
+      <form class="form-signin" role="form" action="login.php" method="post">
         <h2 class="form-signin-heading">Sign In</h2>
         <input type="username" name="username" class="form-control" placeholder="Username" required autofocus>
         <input type="password" name="password" class="form-control" placeholder="Password" required>

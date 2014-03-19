@@ -2,7 +2,7 @@
 
  // Connects to your Database 
 
- mysql_connect("localhost", "root", "krish@123") or die(mysql_error()); 
+ mysql_connect("localhost", "root", "1234") or die(mysql_error()); 
 
  mysql_select_db("daily_dessert") or die(mysql_error()); 
 
